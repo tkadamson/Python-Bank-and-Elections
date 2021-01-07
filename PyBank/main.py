@@ -47,12 +47,25 @@ with open(pybank, newline='') as csvfile:
 
         # Set today's total as previous day total before the next loop
         previousDayTotal = int(row[1])
-        
-    print(total)
-    print(months)
-    print(greatestIncMonth)
-    print(greatestIncrease)
-    print(greatestDecMonth)
-    print(greatestDecrease)
+    
+    #Calculate average change from change list
+    changesTotal = 0
+
+    change.pop(0) # Remove first entry since no change calculated on day 1
+    
+    #Sum changes
+    for day in change:
+        changesTotal = changesTotal + day
+    #Calculate average
+    averageChange = round(changesTotal/(months - 1), 2) #Minus 1 to account for month 1
+
+    #print(total)
+    #print(months)
+    #print(greatestIncMonth)
+    #print(greatestIncrease)
+    #print(greatestDecMonth)
+    #print(greatestDecrease)
+    print(averageChange)
+
 
         
