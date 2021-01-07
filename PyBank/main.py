@@ -2,9 +2,10 @@
 import os
 import csv
 
-# Get file path
+# Get file path to read
 pybank = os.path.join('Resources', 'budget_data1.csv')
 
+#Initialize csv reader
 with open(pybank, newline='') as csvfile:
 
     csvreader = csv.reader(csvfile, delimiter=',')
@@ -59,13 +60,32 @@ with open(pybank, newline='') as csvfile:
     #Calculate average
     averageChange = round(changesTotal/(months - 1), 2) #Minus 1 to account for month 1
 
-    #print(total)
-    #print(months)
-    #print(greatestIncMonth)
-    #print(greatestIncrease)
-    #print(greatestDecMonth)
-    #print(greatestDecrease)
-    print(averageChange)
+# Get file path to write
+outputPath = os.path.join('Resources', 'analysis.txt')
 
+# Initialize csv writer
+with open(outputPath, 'w') as txtfile:
 
-        
+    # Output statements to both the terminal and analysis.txt
+    txtfile.write("Financial Analysis\n")
+    print("Financial Analysis")
+
+    txtfile.write("-----------------------------\n")
+    print("-----------------------------")
+
+    txtfile.write(f"Total months: {months}\n")
+    print(f"Total months: {months}")
+
+    txtfile.write(f"Total: ${total}\n")
+    print(f"Total: ${total}")
+
+    txtfile.write(f"Average change: ${averageChange}\n")
+    print(f"Average change: ${averageChange}")
+
+    txtfile.write(f"Greatest Increase in Profits: {greatestIncMonth} (${greatestIncrease})\n")
+    print(f"Greatest Increase in Profits: {greatestIncMonth} (${greatestIncrease})")
+
+    txtfile.write(f"Greatest Decrease in Profits: {greatestDecMonth} (${greatestDecrease})\n")
+    print(f"Greatest Decrease in Profits: {greatestDecMonth} (${greatestDecrease})")
+
+    
