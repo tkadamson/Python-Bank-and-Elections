@@ -24,10 +24,12 @@ with open(pypoll, newline='') as csvfile:
 
     #Vote total list
     votes = [0, 0, 0, 0]
+    votePerecnt = []
 
     #Put tuple and list in the dictionary
     election["Candidate"] = candidate_list
     election["Vote Total"] = votes
+    election["Percent"] = votePerecnt
 
     #Loop through all rows
     for row in csvreader:
@@ -47,3 +49,13 @@ with open(pypoll, newline='') as csvfile:
         if row[2] == election["Candidate"][3]:
             election["Vote Total"][3] = election["Vote Total"][3] + 1
     
+#Percent changes
+
+for i in range(4):
+
+    voteShare = round((election["Vote Total"][i]/voteSum) * 100, 2)
+
+    #Append to Percent in dictionary
+    election["Percent"].append(voteShare)
+
+#Determine winner
