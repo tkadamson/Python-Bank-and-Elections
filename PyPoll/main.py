@@ -68,4 +68,41 @@ for i in range(4):
         highestVote = election["Vote Total"][i]
         winner = election["Candidate"][i]
 
-print(winner)
+#Initialize csv witer
+
+# Get file path to write
+outputPath = os.path.join('Resources', 'analysis.txt')
+
+# Initialize csv writer
+with open(outputPath, 'w') as txtfile:
+
+    #Print analysis to both the terminal and the text file
+    txtfile.write("Election Results\n")
+    print("Election Results")
+
+    txtfile.write("-------------------------\n")
+    print("-------------------------")
+
+    txtfile.write(f"Total Votes: {voteSum}\n")
+    print(f"Total Votes: {voteSum}")
+
+    txtfile.write("-------------------------\n")
+    print("-------------------------")
+
+    txtfile.write(f'{election["Candidate"][0]}: {election["Percent"][0]}% ({election["Vote Total"][0]})\n')
+    print(f'{election["Candidate"][0]}: {election["Percent"][0]}% ({election["Vote Total"][0]})')
+
+    txtfile.write(f'{election["Candidate"][1]}: {election["Percent"][1]}% ({election["Vote Total"][1]})\n')
+    print(f'{election["Candidate"][1]}: {election["Percent"][1]}% ({election["Vote Total"][1]})')
+
+    txtfile.write(f'{election["Candidate"][2]}: {election["Percent"][2]}% ({election["Vote Total"][2]})\n')
+    print(f'{election["Candidate"][2]}: {election["Percent"][2]}% ({election["Vote Total"][2]})')
+
+    txtfile.write(f'{election["Candidate"][3]}: {election["Percent"][3]}% ({election["Vote Total"][3]})\n')
+    print(f'{election["Candidate"][3]}: {election["Percent"][3]}% ({election["Vote Total"][3]})')
+
+    txtfile.write("-------------------------\n")
+    print("-------------------------")
+
+    txtfile.write(f"Winner: {winner}\n")
+    print(f"Winner: {winner}")
