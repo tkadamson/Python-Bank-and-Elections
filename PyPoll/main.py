@@ -59,3 +59,13 @@ for i in range(4):
     election["Percent"].append(voteShare)
 
 #Determine winner
+highestVote = 0
+
+for i in range(4):
+
+    if election["Vote Total"][i] > highestVote:
+
+        highestVote = election["Vote Total"][i]
+        winner = election["Candidate"][i]
+
+print(winner)
