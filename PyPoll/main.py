@@ -16,13 +16,13 @@ with open(pypoll, newline='') as csvfile:
     #Summation variable
     voteSum = 0
 
-    #Dictionary of candidate and total votes for each
+    #Dictionary of candidates and total votes for each
     election = {}
 
     #Candidate tuple
     candidate_list = ("Correy", "Khan", "Li", "O'Tooley")
 
-    #Vote total list
+    #Vote total list and vote percentage
     votes = [0, 0, 0, 0]
     votePerecnt = []
 
@@ -31,7 +31,7 @@ with open(pypoll, newline='') as csvfile:
     election["Vote Total"] = votes
     election["Percent"] = votePerecnt
 
-    #Loop through all rows
+    #Loop through all rows and read in totals to Vote Total list
     for row in csvreader:
 
         voteSum = voteSum + 1
