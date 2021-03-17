@@ -1,6 +1,6 @@
 # hw3-python-challenge
 
-## Project Instructions
+## Project Instructions | Grade: A
 
 This assignments were divided into two parts; PyBank and PyPoll
 
