@@ -1,7 +1,7 @@
 # Python Bank and Elections Summary
 
 ### Summary | GRADE: A
-This assignment was divided into two parts. In the first, I was given daily transation data for a fictional bank which I looped through using Python to generate a topline summary. For the second, I was given election data, which I loope through using Python to calculate the winner and display the election results.
+This assignment was divided into two parts. In the first, I was given daily transaction data for a fictional bank which I looped through using Python to generate a topline summary. For the second, I was given election data, which I loope through using Python to calculate the winner and display the election results.
 
 ### Solution Writeup
 #### PyBank
