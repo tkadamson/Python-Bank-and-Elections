@@ -9,9 +9,13 @@ After importing dependencies and reading the csv into the code, I created a Loop
 
 Once all the data is collected, the rest of the code is used to display the results as formatted above both in the command line and in a txt document.
 
+![Bank Summary](images/bank_summary.png)
+
 #### PyPoll
 After importing dependencies and reading the csv into the code, I set a list of vote totals set to 0 to start. Then I created a Loop that combs through each row of the csv. The loop checks the candidate name and then assigns that vote to the proper index in the list. 
 
 After calculating vote totals, a loop through the vote totals list was used to change that number into a percent. Lastly, a final loop checks which candidate has the most votes. 
 
 Once all the data is collected, the rest of the code is used to display the results as formatted above both in the command line and in a txt document.
+
+![Poll Summary](images/poll_summary.png)
